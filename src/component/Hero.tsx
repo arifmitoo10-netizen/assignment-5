@@ -23,8 +23,7 @@ const Hero = () => {
             compare them side by side, and put together the stack that
             fits your next project.
           </p>
-
-          {/* Buttons */}
+         
           <div className="mt-8 flex items-center gap-4">
 
             <button className="rounded-lg bg-linear-to-r from-orange-500 to-pink-500 px-5 py-3 font-semibold text-white transition hover:opacity-90">
@@ -37,8 +36,7 @@ const Hero = () => {
 
           </div>
         </div>
-
-        {/* Right Image */}
+        
         <div className="hidden w-[45%] justify-center md:flex">
           <img
             src={heroImage}
@@ -46,7 +44,6 @@ const Hero = () => {
             className="w-107.5 object-contain"
           />
         </div>
-
       </div>
     </section>
   );
