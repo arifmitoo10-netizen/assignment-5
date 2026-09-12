@@ -11,11 +11,10 @@ const Nav = () => {
         <div>
           <ul className="hidden items-center gap-9 md:flex">
             <li className="font-medium text-pink-500 transition hover:text-pink-600">Home</li>
-            <li className="font-medium text-gray-600 transition hover:text-pink-500">Technologies</li>
-            <li className="font-medium text-gray-600 transition hover:text-pink-500">Projects</li>
-            <li className="font-medium text-gray-600 transition hover:text-pink-500">About</li>
-            <li className="font-medium text-gray-600 transition hover:text-pink-500">Contact</li>
-            <li></li>
+            <li>Technologies</li>
+            <li >Projects</li>
+            <li >About</li>
+            <li >Contact</li>
           </ul>
         </div>
 
