@@ -5,8 +5,7 @@ interface TechnologyCardProps {
   TechnologyCardPromise: Promise<Technology[]>;
 }
 const TechnologyCard = ({
-  TechnologyCardPromise,
-}: TechnologyCardProps) => {
+  TechnologyCardPromise,}: TechnologyCardProps) => {
   const technologies = use(TechnologyCardPromise);
   const [selectedTechs, setSelectedTechs] = useState<Technology[]>([]);
   const handleAddToStack = (technology: Technology) => {
@@ -143,13 +142,11 @@ const TechnologyCard = ({
                     >
                       ×
                     </button>
-
                   </div>
                 ))
               )}
 
             </div>
-
             <button
               onClick={handleRemoveAll}
               disabled={selectedTechs.length === 0}
@@ -157,12 +154,9 @@ const TechnologyCard = ({
             >
               Remove All
             </button>
-
           </div>
-
         </div>
       </div>
-
     </section>
   );
 };

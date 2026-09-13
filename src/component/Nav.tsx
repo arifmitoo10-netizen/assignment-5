@@ -10,7 +10,7 @@ const Nav = () => {
 
         <div>
           <ul className="hidden items-center gap-9 md:flex">
-            <li className="font-medium text-pink-500 transition hover:text-pink-600">Home</li>
+            <li className="font-medium text-pink-500 transition">Home</li>
             <li>Technologies</li>
             <li >Projects</li>
             <li >About</li>
@@ -19,11 +19,11 @@ const Nav = () => {
         </div>
 
         <div className="flex items-center gap-6">
-          <button className="hidden font-medium text-gray-600 transition hover:text-pink-500 sm:block">
+          <button className="hidden font-medium text-gray-600 transition sm:block">
             Sign In
           </button>
 
-          <button className="rounded-full bg-pink-600 px-7 py-3 font-medium text-white transition hover:bg-pink-700">
+          <button className="rounded-full bg-pink-600 px-7 py-3 font-medium text-white transition">
             Sign Up
           </button>
         </div>
