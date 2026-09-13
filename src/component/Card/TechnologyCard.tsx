@@ -1,5 +1,7 @@
 import { use, useState } from "react";
 import type { Technology } from "../../Type/types";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 interface TechnologyCardProps {
   TechnologyCardPromise: Promise<Technology[]>;
@@ -8,29 +10,44 @@ const TechnologyCard = ({
   TechnologyCardPromise,}: TechnologyCardProps) => {
   const technologies = use(TechnologyCardPromise);
   const [selectedTechs, setSelectedTechs] = useState<Technology[]>([]);
-  const handleAddToStack = (technology: Technology) => {
-    setSelectedTechs((currentStack) => {
-      const alreadyExists = currentStack.some(
-        (tech) => tech.id === technology.id
-      );
-      if (alreadyExists) {
-        alert(`${technology.name} is already added to your stack!`);
-        return currentStack;
-      };
 
-      return [...currentStack, technology];
-    });
-  };
+  const handleAddToStack = (technology: Technology) => {
+  const alreadyExists = selectedTechs.some(
+    (tech) => tech.id === technology.id
+  );
+
+  if (alreadyExists) {
+    toast.warning(`${technology.name} is already added to your stack!`);
+    return;
+  }
+
+  setSelectedTechs([...selectedTechs, technology]);
+
+  toast.success(`${technology.name} added to your stack!`);
+};
+
   const handleRemove = (id: string) => {
-    setSelectedTechs((currentStack) =>
-      currentStack.filter((tech) => tech.id !== id)
-    );
-  };
+  const removedTech = selectedTechs.find(
+    (tech) => tech.id === id
+  );
+
+  setSelectedTechs(
+    selectedTechs.filter((tech) => tech.id !== id)
+  );
+
+  if (removedTech) {
+    toast.info(`${removedTech.name} removed from your stack!`);
+  }
+};
+
   const handleRemoveAll = () => {
-    setSelectedTechs([]);
-  };
+  setSelectedTechs([]);
+
+  toast.info("All technologies removed from your stack!");
+};
 
   return (
+    <>
     <section className="border-t border-gray-200 bg-white py-10">
       <div className="mx-auto max-w-[1340px] px-6">
         <div className="mb-8">
@@ -101,6 +118,7 @@ const TechnologyCard = ({
               );
             })}
           </div>
+
           <div className="h-fit rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
             <h3 className="text-lg font-bold text-slate-800">
               Your Stack
@@ -156,9 +174,15 @@ const TechnologyCard = ({
             </button>
           </div>
         </div>
+            
       </div>
+
     </section>
+    <ToastContainer />
+
+    </>
   );
+  
 };
 
 export default TechnologyCard;

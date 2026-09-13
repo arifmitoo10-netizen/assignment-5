@@ -5,7 +5,7 @@ const Nav = () => {
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white">
 
-      <div className="relative mx-auto flex h-[90px] max-w-[1340px] items-center justify-between px-6">
+      <div className="relative mx-auto flex h-22.5 max-w-335 items-center justify-between px-6">
      
         <button className="text-2xl md:hidden">
           ☰
