@@ -6,10 +6,8 @@ const Footer = () => {
     <footer className="mt-15 w-full border-t border-gray-100 bg-white">
       <div className="mx-auto max-w-335 px-6">
 
-        {/* Main Footer */}
         <div className="flex flex-col justify-between gap-10 py-12 md:flex-row">
 
-          {/* Brand */}
           <div className="max-w-85">
             <img
               src={logo}
@@ -22,7 +20,6 @@ const Footer = () => {
               building modern software.
             </p>
 
-            {/* Social Links */}
             <ul className="mt-5 flex gap-5 text-sm text-gray-600">
               <li>GitHub</li>
               <li>Twitter</li>
@@ -30,10 +27,8 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Links */}
           <div className="grid grid-cols-2 gap-16 sm:grid-cols-3 sm:gap-24">
 
-            {/* Product */}
             <div>
               <h3 className="mb-4 text-xs font-semibold uppercase tracking-wide text-gray-900">
                 Product
@@ -46,7 +41,6 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Company */}
             <div>
               <h3 className="mb-4 text-xs font-semibold uppercase tracking-wide text-gray-900">
                 Company
@@ -59,7 +53,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Legal */}
+          
             <div>
               <h3 className="mb-4 text-xs font-semibold uppercase tracking-wide text-gray-900">
                 Legal
@@ -74,7 +68,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Footer */}
         <div className="flex flex-col justify-between gap-4 border-t border-gray-100 py-6 text-xs text-gray-400 sm:flex-row">
 
           <p>© 2026 Dev Stack. All rights reserved.</p>
